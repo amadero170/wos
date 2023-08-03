@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model leadsvendedores {
+  id       Int     @id @default(autoincrement())
+  nombre   String?
+  whatsapp Int?
+  correo   String?
+  status   String?
+  agencia  String?
+  ciudad   String?
+}
