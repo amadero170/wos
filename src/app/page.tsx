@@ -11,7 +11,7 @@ style={{
   backgroundImage: `url("/bg-image.jpeg")`,
   backgroundColor:"#013230"
 }}>
-  <Image className="justify-center my-16 lg:my-32" src="/titulo-wos.png" alt="wos" width={271} height={61}></Image>
+  <Image className="justify-center my-16 lg:my-32" src="/wos-logo-blanco.png" alt="wos" width={271} height={61}></Image>
     <h3 className="font-black text-[44px] max-w-3xl my-4">Hola, somos WOS, una plataforma de estrategias digitales inmobiliarias.</h3>
     <h4 className="text-2xl my-4">No queremos venderte nada, queremos ayudarte a<br></br> <i className=" font-black">trabajar con más poder:</i></h4>
   <div className="grid grid-cols-2 gap-4">

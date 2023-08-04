@@ -10,7 +10,7 @@ datasource db {
 model leadsvendedores {
   id       Int     @id @default(autoincrement())
   nombre   String?
-  whatsapp Int?
+  whatsapp String?
   correo   String?
   status   String?
   agencia  String?
