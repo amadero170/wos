@@ -6,7 +6,7 @@ export default function Home() {
 
 return(<>
 <div
-className="bg-top bg-cover min-h-screen flex flex-col items-center px-8 lg:px-40 text-center"
+className="bg-top bg-contain bg-no-repeat max-w-screen w-screen flex flex-col items-center px-8 lg:px-40 text-center"
 style={{
   backgroundImage: `url("/bg-image.jpeg")`,
   backgroundColor:"#013230"
