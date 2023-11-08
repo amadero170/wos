@@ -8,11 +8,30 @@ datasource db {
 }
 
 model leadsvendedores {
-  id       Int     @id @default(autoincrement())
-  nombre   String?
-  whatsapp String?
-  correo   String?
-  status   String?
-  agencia  String?
-  ciudad   String?
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  whatsapp    String?
+  correo      String?
+  status      String?
+  agencia     String?
+  ciudad      String?
+  comentarios String?
+}
+
+model propiedades {
+  id     Int     @id @default(autoincrement())
+  nombre String?
+  tipo   String?
+  user   user?   @relation(fields: [userId], references: [id])
+  userId Int?
+}
+
+model user {
+  id          Int           @id @default(autoincrement())
+  nombre      String?
+  email       String?       @unique
+  password    String
+  telefono    String?
+  agencia     String?
+  propiedades propiedades[]
 }

@@ -1,6 +1,6 @@
 import { prisma } from "@/db" 
 
-export async function POST(req){
+export async function POST(req: Request){
 
 const body = await req.json()
 
