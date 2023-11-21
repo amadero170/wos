@@ -1,33 +1,33 @@
-import Navbar from '@/components/Navbar'
-import './globals.css'
-import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
-import SessionProvider from './SessionProviders'
-import { getServerSession } from 'next-auth'
-import { authOptions } from './api/auth/[...nextauth]/route'
+import Navbar from "@/components/Navbar";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Raleway } from "next/font/google";
+import SessionProvider from "./SessionProviders";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-const raleway = Raleway({ subsets: ['latin'] })
+const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'WOS',
-  description: 'Plataforma de estrategias digitales inmobiliarias',
-}
+  title: "WOS",
+  description: "Plataforma de estrategias digitales inmobiliarias",
+};
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions)
-  console.log(JSON.stringify(session))
+  const session = await getServerSession(authOptions);
+  console.log(JSON.stringify(session));
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={raleway.className}>
         <SessionProvider session={session}>
-        <Navbar/>
-        {children}
+          <Navbar />
+          {children}
         </SessionProvider>
-        </body>
+      </body>
     </html>
-  )
+  );
 }

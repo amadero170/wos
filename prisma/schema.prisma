@@ -19,11 +19,17 @@ model leadsvendedores {
 }
 
 model propiedades {
-  id     Int     @id @default(autoincrement())
-  nombre String?
-  tipo   String?
-  user   user?   @relation(fields: [userId], references: [id])
-  userId Int?
+  id      Int     @id @default(autoincrement())
+  nombre  String?
+  tipo    String?
+  user    user?   @relation(fields: [userId], references: [id])
+  userId  Int?
+  imagen  String?
+  estado  String?
+  ciudad  String?
+  banos   String?
+  cuartos String?
+  metros  Int?
 }
 
 model user {

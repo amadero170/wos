@@ -1,31 +1,7 @@
 import { prisma } from "@/db";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
 import { NextResponse } from "next/server";
-
-export async function POST(req: Request) {
-  const session: any = await getServerSession(authOptions);
-  const body = await req.json();
-
-  console.log("API property post session", session);
-  console.log("BODY", body);
-  let sessionUserId: number = 0;
-
-  if (session && session.user) {
-    sessionUserId = Number(session.user.id);
-  }
-
-  await prisma.propiedades.create({
-    data: {
-      nombre: body.nombre,
-      tipo: body.tipo,
-      userId: sessionUserId,
-      imagen: body.imagen,
-    },
-  });
-
-  return new Response("ok");
-}
+import { authOptions } from "../auth/[...nextauth]/route";
 
 export async function GET() {
   console.log("get ep run");
