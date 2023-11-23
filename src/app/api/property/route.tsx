@@ -7,8 +7,6 @@ export async function POST(req: Request) {
   const session: any = await getServerSession(authOptions);
   const body = await req.json();
 
-  console.log("API property post session", session);
-  console.log("BODY", body);
   let sessionUserId: number = 0;
 
   if (session && session.user) {
@@ -28,21 +26,19 @@ export async function POST(req: Request) {
 }
 
 export async function GET() {
-  console.log("get ep run");
   const session: any = await getServerSession(authOptions);
 
-  console.log("API property GET session", session);
   let sessionUserId: number = 0;
 
   if (session && session.user) {
     sessionUserId = Number(session.user.id);
   }
-  console.log("sessionUserId", sessionUserId);
+
   const properties = await prisma.propiedades.findMany({
     where: {
       userId: sessionUserId,
     },
   });
-  console.log("properties en route", properties);
+
   return NextResponse.json(properties, { status: 200 });
 }

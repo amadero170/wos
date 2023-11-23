@@ -1,19 +1,17 @@
-import { prisma } from "@/db" 
-import { hash } from "bcrypt"
-import { redirect } from "next/navigation"
+import { prisma } from "@/db";
+import { hash } from "bcrypt";
 
-export async function POST(req: Request){
+export async function POST(req: Request) {
+  const body = await req.json();
 
-const body = await req.json()
+  const hashedPassword = await hash(body.password, 12);
 
-const hashedPassword = await hash(body.password,12)
-
-await prisma.user.create({
+  await prisma.user.create({
     data: {
-        nombre: body.name,
-        email:body.email, 
-        password:hashedPassword,      
+      nombre: body.name,
+      email: body.email,
+      password: hashedPassword,
     },
-  })
-  return new Response("ok")
+  });
+  return new Response("ok");
 }
