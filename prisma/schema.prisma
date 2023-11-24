@@ -27,9 +27,11 @@ model propiedades {
   imagen  String?
   estado  String?
   ciudad  String?
-  banos   String?
-  cuartos String?
+  banos   Int?
+  cuartos Int?
   metros  Int?
+  cp      Int?
+  precio  String?
 }
 
 model user {

@@ -9,8 +9,6 @@ export default function AddProperty() {
       <Button className="m-4">
         <Link href={"/users"}>volver</Link>
       </Button>
-
-      {/* <PropertyForm /> */}
     </>
   );
 }

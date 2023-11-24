@@ -17,11 +17,14 @@ export type Property = {
   id: number;
   nombre: string;
   tipo: string;
-  cuartos: string;
-  banos: string;
+  cuartos: number;
+  banos: number;
   metros: number;
   ciudad: string;
   estado: string;
+  precio: string;
+  cp: string;
+  imagen: string;
 };
 
 export const columns: ColumnDef<Property>[] = [
@@ -66,6 +69,14 @@ export const columns: ColumnDef<Property>[] = [
   {
     accessorKey: "banos",
     header: "Baños",
+  },
+  {
+    accessorKey: "cp",
+    header: "CP",
+  },
+  {
+    accessorKey: "precio",
+    header: "Precio",
   },
 
   {

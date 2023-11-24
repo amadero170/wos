@@ -26,10 +26,10 @@ export default function AddPropertyForm() {
   } = useForm({
     resolver: zodResolver(newPropertySchema),
   });
-  // const { data: session } = useSession();
+  const { data: session } = useSession();
   const [imageId, setImageId] = useState("");
 
-  const onSubmit = async (data: TNewPropertySchema) => {
+  const onSubmit = async (data: FieldValues) => {
     data.imagen = imageId;
     await fetch("/api/property", {
       method: "POST",
@@ -50,7 +50,7 @@ export default function AddPropertyForm() {
       <h3 className="text-3xl text-center text-white mb-6 font-bold">
         Ingresa una nueva propiedad
       </h3>
-      {/* <h4 className="text-white">{session?.user?.name}</h4> */}
+      <h4 className="text-white">{session?.user?.name}</h4>
 
       <div className="w-full flex flex-col my-4">
         <Input
