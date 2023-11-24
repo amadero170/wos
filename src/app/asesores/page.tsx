@@ -1,4 +1,4 @@
-import ContactForm from "./asesores/ContactForm";
+import ContactForm from "./ContactForm";
 import Image from "next/image";
 import Link from "next/link";
 
