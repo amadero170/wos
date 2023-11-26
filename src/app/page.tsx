@@ -1,4 +1,4 @@
-import ContactForm from "./asesores/ContactForm";
+import CustomerContactForm from "./CustomerContactForm";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,7 +59,7 @@ export default function Home() {
 
       <div className="bg-[#013230] py-16 flex flex-col items-center px-4 lg:px-40">
         <div className="px-2">
-          <ContactForm />
+          <CustomerContactForm />
         </div>
         <Image
           className="my-12"

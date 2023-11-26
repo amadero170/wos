@@ -5,14 +5,26 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  // url  	    = env("DATABASE_URL_DESARROLLO")
+  // directUrl = env("DIRECT_URL")
 }
 
-model leadsvendedores {
+model asesores_interesados {
   id       Int     @id @default(autoincrement())
   nombre   String?
   whatsapp String?
   correo   String?
   status   String?
   agencia  String?
+  ciudad   String?
+}
+
+model leads {
+  id       Int     @id @default(autoincrement())
+  nombre   String?
+  whatsapp String?
+  correo   String?
+  tipo     String?
+  monto    String?
   ciudad   String?
 }

@@ -3,7 +3,7 @@ import { prisma } from "@/db";
 export async function POST(req: Request) {
   const body = await req.json();
 
-  await prisma.leadsvendedores.create({
+  await prisma.asesores_interesados.create({
     data: {
       nombre: body.name,
       whatsapp: body.whatsapp,
