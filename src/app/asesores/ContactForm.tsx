@@ -1,5 +1,5 @@
 "use client";
-
+import { toast } from "@/components/ui/use-toast";
 import { useState } from "react";
 
 export default function ContactForm() {
@@ -36,6 +36,12 @@ export default function ContactForm() {
       event.target.status.value = "";
       event.target.agencia.value = "";
       event.target.ciudad.value = "";
+
+      console.log("response OK");
+      toast({
+        title: "Mensaje Recibido",
+        description: "Muchas gracias, estaremos conatactándote a la brevedad",
+      });
     }
     if (!response.ok) {
       console.log("Error sending message");
@@ -45,7 +51,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full sm:w-[600px] lg:w-[780px] rounded-xl px-2 sm:px-8  lg:px-20 py-20 bg-gradient-to-b from-[#309B9D] to-[#3087891C]"
+      className="w-full text-white sm:w-[600px] lg:w-[780px] rounded-xl px-2 sm:px-8  lg:px-20 py-20 bg-gradient-to-b from-[#309B9D] to-[#3087891C]"
     >
       <h3 className="font-black text-3xl text-center">
         ¿Quieres ser parte del equipo?
@@ -92,7 +98,7 @@ export default function ContactForm() {
       <div className="w-full flex flex-col my-4">
         <input
           type="text"
-          minLength={3}
+          minLength={2}
           maxLength={150}
           required
           className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
@@ -104,7 +110,7 @@ export default function ContactForm() {
       <div className="w-full flex flex-col my-4">
         <input
           type="text"
-          minLength={3}
+          minLength={2}
           maxLength={150}
           required
           className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
