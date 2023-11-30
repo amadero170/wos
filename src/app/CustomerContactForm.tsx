@@ -147,7 +147,7 @@ export default function AddPropertyForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-36 h-12 bg-yellow-300 rounded-lg right-1 relative font-bold"
+          className="w-36 h-12 bg-yellow-300 rounded-lg right-1 relative font-bold disabled:bg-slate-400"
         >
           Enviar
         </button>
