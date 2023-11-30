@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="text-center text-white text-[60px] font-black leading-[54px] mr-8">
+          <div className="text-center text-white sm:text-[60px] text-[55px] font-black leading-[54px] sm:mr-8">
             Bienvenido a {"  "}
           </div>
           <Image
@@ -45,8 +45,8 @@ export default function Home() {
             <div className="rounded-full bg-teal-950 w-12 h-12 flex justify-center items-center">
               <Image
                 className="justify-center "
-                src="/asesoria.svg"
-                alt="lasesoria"
+                src="/lupa.svg"
+                alt="lupa"
                 width={20}
                 height={20}
               ></Image>
