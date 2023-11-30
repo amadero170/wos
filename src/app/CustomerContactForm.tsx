@@ -26,15 +26,30 @@ export default function AddPropertyForm() {
 
   const onSubmit = async (data: FieldValues) => {
     console.log(data);
-    const response = await fetch("/api/leads", {
+    const dbResponse = await fetch("/api/leads", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
-    if (response.ok) {
-      console.log("response OK");
+    if (dbResponse.ok) {
+      console.log("dbresponse OK");
+      // toast({
+      //   title: "Mensaje Recibido",
+      //   description: "Muchas gracias, estaremos conatactándote a la brevedad",
+      // });
+    }
+
+    const sendResponse = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (sendResponse.ok) {
+      console.log("email sent");
       toast({
         title: "Mensaje Recibido",
         description: "Muchas gracias, estaremos conatactándote a la brevedad",
