@@ -45,8 +45,8 @@ export default function Home() {
             <div className="rounded-full bg-teal-950 w-12 h-12 flex justify-center items-center">
               <Image
                 className="justify-center "
-                src="/lupa.svg"
-                alt="lupa"
+                src="/asesoria.svg"
+                alt="lasesoria"
                 width={20}
                 height={20}
               ></Image>
@@ -73,8 +73,8 @@ export default function Home() {
             <div className="rounded-full bg-teal-950 w-12 h-12 flex justify-center items-center">
               <Image
                 className="justify-center "
-                src="/seguimiento.svg"
-                alt="seguimiento"
+                src="/analiza.svg"
+                alt="analiza"
                 width={20}
                 height={20}
               ></Image>
@@ -88,8 +88,8 @@ export default function Home() {
             <div className="rounded-full bg-teal-950 w-12 h-12 flex justify-center items-center">
               <Image
                 className="justify-center "
-                src="/lupa.svg"
-                alt="wos"
+                src="/asesoria.svg"
+                alt="asesoria"
                 width={20}
                 height={20}
               ></Image>
