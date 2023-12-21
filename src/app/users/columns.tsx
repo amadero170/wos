@@ -2,6 +2,8 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal, ArrowUpDown } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
+
 export type Property = {
   id: number;
   nombre: string;
@@ -99,7 +102,9 @@ export const columns: ColumnDef<Property>[] = [
               Copiar nombre de casa
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Ver propiedad</DropdownMenuItem>
+            <Link href="http://localhost:3000/property/view/30">
+              <DropdownMenuItem>Ver propiedad</DropdownMenuItem>
+            </Link>
             <DropdownMenuItem>Editar propiedad</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

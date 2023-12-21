@@ -5,6 +5,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const body = await req.json();
+  console.log("body", body);
+  console.log("body.id", body.id);
   const id = Number(body);
   console.log(id, typeof id);
   const property = await prisma.propiedades.findUnique({

@@ -2,6 +2,7 @@ import { Property } from "@/app/users/columns";
 import { headers } from "next/headers";
 
 export default async function Page({ params }: { params: { id: string } }) {
+  console.log("params id", params.id);
   async function getData(): Promise<Property> {
     const res = await fetch("http://localhost:3000/api/get-property-by-id", {
       method: "POST",
