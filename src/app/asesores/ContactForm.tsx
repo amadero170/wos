@@ -51,21 +51,15 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full text-white sm:w-[600px] lg:w-[780px] rounded-xl px-2 sm:px-8  lg:px-20 py-20 bg-gradient-to-b from-[#309B9D] to-[#3087891C]"
+      className="w-full text-white sm:w-[600px] lg:w-[780px] rounded-xl px-2 sm:px-8  lg:px-20 py-20 "
     >
-      <h3 className="font-black text-3xl text-center">
-        ¿Quieres ser parte del equipo?
-      </h3>
-      <h4 className="font-semi-bold text-xl mt-8 text-center">
-        Déjanos tus datos y nos pondremos en contacto contigo.
-      </h4>
       <div className="w-full flex flex-col my-4">
         <input
           type="text"
           minLength={3}
           maxLength={150}
           required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
+          className="p-4 bg-white border text-black placeholder:text-[#101C3D] rounded-sm "
           autoComplete="off"
           id="name"
           placeholder="Nombre Completo"
@@ -77,7 +71,7 @@ export default function ContactForm() {
           minLength={3}
           maxLength={15}
           required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
+          className="p-4 bg-white border text-black placeholder:text-[#101C3D] rounded-sm "
           autoComplete="off"
           id="whatsapp"
           placeholder="Whatsapp"
@@ -89,55 +83,19 @@ export default function ContactForm() {
           minLength={5}
           maxLength={150}
           required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
+          className="p-4 bg-white border text-black placeholder:text-[#101C3D] rounded-sm "
           autoComplete="off"
           id="email"
           placeholder="Correo electrónico"
-        />
-      </div>
-      <div className="w-full flex flex-col my-4">
-        <input
-          type="text"
-          minLength={2}
-          maxLength={150}
-          required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
-          autoComplete="off"
-          id="status"
-          placeholder="¿Perteneces a alguna agencia o eres independiente?"
-        />
-      </div>
-      <div className="w-full flex flex-col my-4">
-        <input
-          type="text"
-          minLength={2}
-          maxLength={150}
-          required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
-          autoComplete="off"
-          id="agencia"
-          placeholder="Agencia"
-        />
-      </div>
-      <div className="w-full flex flex-col my-4">
-        <input
-          type="text"
-          minLength={3}
-          maxLength={150}
-          required
-          className="p-4 bg-transparent border border-[#AFFAFC] rounded-lg text-white"
-          autoComplete="off"
-          id="ciudad"
-          placeholder="Ciudad"
         />
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className="px-4 py-2 w-full text-lg bg-[#FF4F8E] rounded-lg py-8 disabled:bg-gray-400 disabled:text-gray-100 text-white font-black mt-4"
+        className="px-4 w-full text-lg bg-[#FF4F8E] rounded-lg py-8 disabled:bg-gray-400 disabled:text-gray-100 text-white font-black mt-4"
       >
-        Quiero ser contactado
+        Enviar
       </button>
     </form>
   );
