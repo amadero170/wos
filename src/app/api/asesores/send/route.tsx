@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   try {
     const data = await resend.emails.send({
       from: "WOS <hola@wos.mx>",
-      to: ["amadero170@gmail.com"],
+      to: ["hola@wos.mx"],
       bcc: ["amadero170@gmail.com"],
       subject: "Hola",
 
@@ -25,9 +25,7 @@ export async function POST(req: Request) {
       }),
       text: "",
     });
-    console.log("nombre", name);
-    console.log("whatsapp", whatsapp);
-    console.log("correo", email);
+
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error });
