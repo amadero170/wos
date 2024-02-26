@@ -27,7 +27,7 @@ export default function MyComponent() {
           </div>
         </div>
       </div>
-      <div className="mt-20 text-5xl font-black leading-10 text-center text-[#101C3D] max-md:mt-10">
+      <div className="mt-20 text-5xl font-black leading-10 text-center text-[#101C3D] ">
         Bienvenido a <span className="text-pink-500">WOS. </span> <br />
       </div>
       <div className="mt-11 text-xl max-w-[650px] font-medium leading-8 text-center text-slate-800 max-md:mt-10 max-md:max-w-full">
@@ -37,8 +37,8 @@ export default function MyComponent() {
       <div className="px-5 mt-24 w-full max-w-[1108px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+            <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800  max-md:flex-row max-md:mt-8">
+              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB] min-w-[54px]">
                 <Image
                   src="/asesores/icono-sube-tu-inmueble.svg"
                   width={27}
@@ -46,15 +46,15 @@ export default function MyComponent() {
                   alt=""
                 />
               </div>
-              <div className="mt-6">
+              <div className="mt-6 self-center max-md:mt-0 max-md:ml-2">
                 <span className="font-bold">Sube tu inmueble</span> a
                 estrategias digitales planeadas y ejecutadas por expertos..
               </div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+            <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800  max-md:flex-row max-md:mt-8">
+              <div className="flex justify-center items-center rounded-lg min-w-[54px] w-[54px] h-[54px] bg-[#F7F6FB]">
                 <Image
                   src="/asesores/icono-genera-clientes.svg"
                   width={27}
@@ -62,15 +62,15 @@ export default function MyComponent() {
                   alt=""
                 />
               </div>
-              <div className="mt-6">
+              <div className="mt-6 self-center max-md:mt-0 max-md:ml-2">
                 <span className="font-bold">Genera clientes</span> potenciales
                 perfilados.
               </div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+            <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800  max-md:flex-row max-md:mt-8">
+              <div className="flex justify-center items-center rounded-lg min-w-[54px] w-[54px] h-[54px] bg-[#F7F6FB]">
                 <Image
                   src="/asesores/icono-recibe-informacion.svg"
                   width={27}
@@ -78,15 +78,15 @@ export default function MyComponent() {
                   alt=""
                 />
               </div>
-              <div className="mt-6">
+              <div className="mt-6 self-center max-md:mt-0 max-md:ml-2">
                 <span className="font-bold">Recibe información</span> y
                 capacitación presencial y digital.
               </div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+            <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800  max-md:flex-row max-md:mt-8">
+              <div className="flex justify-center items-center rounded-lg min-w-[54px] w-[54px] h-[54px] bg-[#F7F6FB]">
                 <Image
                   src="/asesores/icono-accede-a-preventa.svg"
                   width={27}
@@ -94,7 +94,7 @@ export default function MyComponent() {
                   alt=""
                 />
               </div>
-              <div className="mt-6">
+              <div className="mt-6 self-center max-md:mt-0 max-md:ml-2">
                 <span className="font-bold">Accede a preventas</span> y
                 comisiones exclusivas.
               </div>
