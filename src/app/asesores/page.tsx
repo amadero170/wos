@@ -160,7 +160,7 @@ export default function MyComponent() {
           Envía un mensaje para conocer la plataforma y registrarte.
         </div>
         <div className="flex gap-5 justify-around  mt-14 text-2xl font-bold  flex-wrap max-w-full">
-          <Link href="https://wa.link/70wd4s">
+          <Link href="https://wa.link/70wd4s" target="_blank">
             <div className="flex gap-3.5 justify-between px-8 py-4 border-2 border-green-500 border-solid rounded-[55px] ">
               <Image
                 src="/asesores/icono-wapp.svg"
@@ -171,7 +171,10 @@ export default function MyComponent() {
               <div className="self-center">Whatsapp</div>
             </div>
           </Link>
-          <Link href="https://www.facebook.com/wosdigitalestate">
+          <Link
+            href="https://www.facebook.com/wosdigitalestate"
+            target="_blank"
+          >
             <div className="flex gap-3.5 justify-between px-8 py-4 border-2 border-sky-500 border-solid rounded-[55px] ">
               <Image
                 src="/asesores/icono-messenger.svg"
@@ -182,7 +185,10 @@ export default function MyComponent() {
               <div className="self-center">Messenger</div>
             </div>
           </Link>
-          <Link href="https://www.instagram.com/wosdigitalestate/">
+          <Link
+            href="https://www.instagram.com/wosdigitalestate/"
+            target="_blank"
+          >
             <div className="flex gap-4 justify-between px-8 py-4 border-2 border-red-600 border-solid rounded-[55px] ">
               <Image
                 src="/asesores/icono-ig.svg"
@@ -193,7 +199,7 @@ export default function MyComponent() {
               <div className="self-center">Instagram</div>
             </div>
           </Link>
-          <Link href="tel: +523223779860">
+          <Link href="tel: +523223779860" target="_blank">
             <div className="flex gap-5 justify-between px-8 py-4 border-2 border-white border-solid rounded-[55px] ">
               <Image
                 src="/asesores/icono-llamada.svg"
