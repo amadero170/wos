@@ -8,9 +8,6 @@ export async function POST(req: Request) {
       nombre: body.name,
       whatsapp: body.whatsapp,
       correo: body.email,
-      status: body.status,
-      agencia: body.agencia,
-      ciudad: body.ciudad,
     },
   });
 

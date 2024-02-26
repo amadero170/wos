@@ -13,9 +13,6 @@ export default function ContactForm() {
       name: String(event.target.name.value),
       whatsapp: String(event.target.whatsapp.value),
       email: String(event.target.email.value),
-      status: String(event.target.status.value),
-      agencia: String(event.target.agencia.value),
-      ciudad: String(event.target.ciudad.value),
     };
 
     const response = await fetch("/api/asesores", {
@@ -33,26 +30,42 @@ export default function ContactForm() {
       event.target.name.value = "";
       event.target.whatsapp.value = "";
       event.target.email.value = "";
-      event.target.status.value = "";
-      event.target.agencia.value = "";
-      event.target.ciudad.value = "";
 
       console.log("response OK");
-      toast({
-        title: "Mensaje Recibido",
-        description: "Muchas gracias, estaremos conatactándote a la brevedad",
-      });
+      // toast({
+      //   title: "Mensaje Recibido",
+      //   description: "Muchas gracias, estaremos conatactándote a la brevedad",
+      // });
     }
     if (!response.ok) {
       console.log("Error sending message");
       setLoading(false);
     }
+    const sendResponse = await fetch("/api/asesores/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (sendResponse.ok) {
+      console.log("email sent");
+      toast({
+        title: "Mensaje Recibido",
+        description: "Muchas gracias, estaremos conatactándote a la brevedad",
+      });
+    }
   }
+
   return (
     <form
       onSubmit={handleSubmit}
       className="w-full text-white sm:w-[600px] lg:w-[780px] rounded-xl px-2 sm:px-8  lg:px-20 py-20 "
     >
+      <div className="mt-16 mb-10 text-2xl font-bold leading-10 text-center max-md:mt-10 max-md:max-w-full">
+        O si prefieres, deja tus datos aquí y un asesor WOS te contactará a la
+        brevedad.
+      </div>
       <div className="w-full flex flex-col my-4">
         <input
           type="text"

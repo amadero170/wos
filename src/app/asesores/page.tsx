@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import Link from "next/link";
 
 export default function MyComponent() {
   return (
@@ -37,12 +38,14 @@ export default function MyComponent() {
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col grow text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <Image
-                src="/asesores/icono-sube-tu-inmueble.svg"
-                width={54}
-                height={54}
-                alt=""
-              />
+              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+                <Image
+                  src="/asesores/icono-sube-tu-inmueble.svg"
+                  width={27}
+                  height={27}
+                  alt=""
+                />
+              </div>
               <div className="mt-6">
                 <span className="font-bold">Sube tu inmueble</span> a
                 estrategias digitales planeadas y ejecutadas por expertos..
@@ -51,12 +54,14 @@ export default function MyComponent() {
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <Image
-                src="/asesores/icono-genera-clientes.svg"
-                width={54}
-                height={54}
-                alt=""
-              />
+              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+                <Image
+                  src="/asesores/icono-genera-clientes.svg"
+                  width={27}
+                  height={27}
+                  alt=""
+                />
+              </div>
               <div className="mt-6">
                 <span className="font-bold">Genera clientes</span> potenciales
                 perfilados.
@@ -65,12 +70,14 @@ export default function MyComponent() {
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <Image
-                src="/asesores/icono-recibe-informacion.svg"
-                width={54}
-                height={54}
-                alt=""
-              />
+              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+                <Image
+                  src="/asesores/icono-recibe-informacion.svg"
+                  width={27}
+                  height={27}
+                  alt=""
+                />
+              </div>
               <div className="mt-6">
                 <span className="font-bold">Recibe información</span> y
                 capacitación presencial y digital.
@@ -79,12 +86,14 @@ export default function MyComponent() {
           </div>
           <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col text-base font-medium leading-6 text-slate-800 max-md:mt-10">
-              <Image
-                src="/asesores/icono-accede-a-preventa.svg"
-                width={54}
-                height={54}
-                alt=""
-              />
+              <div className="flex justify-center items-center rounded-lg w-[54px] h-[54px] bg-[#F7F6FB]">
+                <Image
+                  src="/asesores/icono-accede-a-preventa.svg"
+                  width={27}
+                  height={27}
+                  alt=""
+                />
+              </div>
               <div className="mt-6">
                 <span className="font-bold">Accede a preventas</span> y
                 comisiones exclusivas.
@@ -150,51 +159,56 @@ export default function MyComponent() {
         <div className=" text-2xl font-bold leading-10 text-center  max-md:mt-10 max-md:max-w-full">
           Envía un mensaje para conocer la plataforma y registrarte.
         </div>
-        <div className="flex gap-5 justify-between self-stretch mt-10 text-2xl font-bold leading-10 whitespace-nowrap max-md:flex-wrap max-md:max-w-full">
-          <div className="flex gap-3.5 justify-between px-14 py-5 border-2 border-green-500 border-solid rounded-[55px] max-md:px-5">
-            <Image
-              src="/asesores/icono-wapp.svg"
-              width={36}
-              height={36}
-              alt="Whatsapp icon"
-            />
-            <div className="grow self-start mt-3">Whatsapp</div>
-          </div>
-          <div className="flex gap-4 justify-between px-12 py-5 border-2 border-sky-500 border-solid rounded-[55px] max-md:px-5">
-            <Image
-              src="/asesores/icono-messenger.svg"
-              width={36}
-              height={38}
-              alt="Messenger icon"
-            />
-            <div className="flex-auto self-start mt-3">Messenger</div>
-          </div>
-          <div className="flex gap-4 justify-between px-16 py-6 border-2 border-red-600 border-solid rounded-[55px] max-md:px-5">
-            <Image
-              src="/asesores/icono-ig.svg"
-              width={25}
-              height={25}
-              alt="Instagram icon"
-            />
-            <div className="flex-auto">Instagram</div>
-          </div>
-          <div className="flex gap-5 justify-between px-12 py-5 border-2 border-white border-solid rounded-[55px] max-md:px-5">
-            <Image
-              src="/asesores/icono-llamada.svg"
-              width={32}
-              height={32}
-              alt="Call icon"
-            />
-            <div className="flex-auto self-start mt-3">Llamada</div>
-          </div>
+        <div className="flex gap-5 justify-around  mt-14 text-2xl font-bold  flex-wrap max-w-full">
+          <Link href="https://wa.link/70wd4s">
+            <div className="flex gap-3.5 justify-between px-8 py-4 border-2 border-green-500 border-solid rounded-[55px] ">
+              <Image
+                src="/asesores/icono-wapp.svg"
+                width={36}
+                height={36}
+                alt="Whatsapp icon"
+              />
+              <div className="self-center">Whatsapp</div>
+            </div>
+          </Link>
+          <Link href="https://www.facebook.com/wosdigitalestate">
+            <div className="flex gap-3.5 justify-between px-8 py-4 border-2 border-sky-500 border-solid rounded-[55px] ">
+              <Image
+                src="/asesores/icono-messenger.svg"
+                width={36}
+                height={38}
+                alt="Messenger icon"
+              />
+              <div className="self-center">Messenger</div>
+            </div>
+          </Link>
+          <Link href="https://www.instagram.com/wosdigitalestate/">
+            <div className="flex gap-4 justify-between px-8 py-4 border-2 border-red-600 border-solid rounded-[55px] ">
+              <Image
+                src="/asesores/icono-ig.svg"
+                width={25}
+                height={25}
+                alt="Instagram icon"
+              />
+              <div className="self-center">Instagram</div>
+            </div>
+          </Link>
+          <Link href="tel: +523223779860">
+            <div className="flex gap-5 justify-between px-8 py-4 border-2 border-white border-solid rounded-[55px] ">
+              <Image
+                src="/asesores/icono-llamada.svg"
+                width={32}
+                height={32}
+                alt="Call icon"
+              />
+              <div className="self-center">Llamada{"  "}</div>
+            </div>
+          </Link>
         </div>
-        <div className="mt-36 text-2xl font-bold leading-10 text-center max-md:mt-10 max-md:max-w-full">
-          O si prefieres, deja tus datos aquí y un asesor WOS te contactará a la
-          brevedad.
-        </div>
+
         <ContactForm />
         <Image
-          src="/logo-wos-sin-texto.png"
+          src="/wos.svg"
           width={142}
           height={32}
           className="mt-32 mb-10 max-w-full"
