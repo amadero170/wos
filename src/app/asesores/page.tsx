@@ -5,13 +5,18 @@ import Link from "next/link";
 export default function AsesoresPage() {
   return (
     <div className="flex flex-col items-center bg-white">
-      <div className="flex overflow-hidden relative flex-col justify-center items-center self-stretch px-16 py-12 w-full text-white text-center min-h-[706px] max-md:px-5 max-md:max-w-full">
+      <div
+        className="flex overflow-hidden relative flex-col justify-center
+       items-center self-stretch px-16 py-12 w-full text-white text-center min-h-[100vh] 
+       max-md:px-5 max-md:max-w-full"
+      >
         <Image
           src="/asesores/bg-hero-banner.png"
-          layout="fill"
-          objectFit="cover"
+          // layout="fill"
+          width={1080}
+          height={1080}
           priority={true}
-          className="object-cover absolute inset-0 size-full"
+          className="object-cover absolute inset-0 w-full h-full"
           alt=""
         />
         <div className="flex relative flex-col mt-3.5 mb-48 max-md:mb-10">
