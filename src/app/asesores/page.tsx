@@ -2,7 +2,7 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import Link from "next/link";
 
-export default function MyComponent() {
+export default function AsesoresPage() {
   return (
     <div className="flex flex-col items-center bg-white">
       <div className="flex overflow-hidden relative flex-col justify-center items-center self-stretch px-16 py-12 w-full text-white text-center min-h-[706px] max-md:px-5 max-md:max-w-full">
@@ -10,6 +10,7 @@ export default function MyComponent() {
           src="/asesores/bg-hero-banner.png"
           layout="fill"
           objectFit="cover"
+          priority={true}
           className="object-cover absolute inset-0 size-full"
           alt=""
         />
