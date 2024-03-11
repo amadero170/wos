@@ -35,10 +35,6 @@ export default function AddPropertyForm() {
     });
     if (dbResponse.ok) {
       console.log("dbresponse OK");
-      // toast({
-      //   title: "Mensaje Recibido",
-      //   description: "Muchas gracias, estaremos conatactándote a la brevedad",
-      // });
     }
 
     const sendResponse = await fetch("/api/send", {
@@ -49,10 +45,10 @@ export default function AddPropertyForm() {
       body: JSON.stringify(data),
     });
     if (sendResponse.ok) {
-      console.log("email sent");
+      console.log("email sent", sendResponse.status);
       toast({
         title: "Mensaje Recibido",
-        description: "Muchas gracias, estaremos conatactándote a la brevedad",
+        description: "Muchas gracias, estaremos contactándote a la brevedad",
       });
     }
 
@@ -62,9 +58,9 @@ export default function AddPropertyForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-[#162550] w-full sm:w-[600px] lg:w-[720px] rounded-xl px-2 sm:px-8 lg:px-20 py-12"
+      className="bg-[#191919] w-full sm:w-[600px] lg:w-[720px] px-2 sm:px-8 lg:px-20 py-12"
     >
-      <h3 className="text-2xl text-center text-amber-300 mb-6 font-bold">
+      <h3 className="text-2xl text-center text-white mb-6 font-medium">
         ¿Estás buscando invertir o comprar una propiedad?
       </h3>
       <h3 className="text-xl text-center text-white mb-6 ">
@@ -77,7 +73,7 @@ export default function AddPropertyForm() {
           {...register("nombre", {})}
           type="text"
           placeholder="Nombre Completo"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
 
         {errors.nombre && (
@@ -89,7 +85,7 @@ export default function AddPropertyForm() {
           {...register("whatsapp", {})}
           type="text"
           placeholder="Whatsapp"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
 
         {errors.whatsapp && (
@@ -101,7 +97,7 @@ export default function AddPropertyForm() {
           {...register("correo", {})}
           type="text"
           placeholder="Correo electrónico"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
 
         {errors.correo && (
@@ -114,7 +110,7 @@ export default function AddPropertyForm() {
           {...register("tipo", {})}
           type="text"
           placeholder="Tipo de propiedad"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
         {errors.tipo && (
           <p className="text-red-500">{`${errors.tipo.message}`}</p>
@@ -126,7 +122,7 @@ export default function AddPropertyForm() {
           {...register("monto", {})}
           type="text"
           placeholder="Monto aproximado de inversión"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
         {errors.monto && (
           <p className="text-red-500">{`${errors.monto.message}`}</p>
@@ -137,7 +133,7 @@ export default function AddPropertyForm() {
           {...register("ciudad", {})}
           type="text"
           placeholder="Ciudad en la que deseas invertir"
-          className="rounded-lg border border-indigo-500 bg-[#162550] h-12 p-4 text-white placeholder-white"
+          className="rounded-lg border border-[#555555] bg-[#191919] h-12 p-4 text-white placeholder-white"
         />
         {errors.ciudad && (
           <p className="text-red-500">{`${errors.ciudad.message}`}</p>
@@ -147,7 +143,7 @@ export default function AddPropertyForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-36 h-12 bg-yellow-300 rounded-lg right-1 relative font-bold disabled:bg-slate-400"
+          className="w-36 h-12 bg-white rounded-lg text-[#191919] right-1 relative font-bold disabled:bg-slate-400"
         >
           Enviar
         </button>
