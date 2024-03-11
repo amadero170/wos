@@ -1,37 +1,33 @@
-import { EmailTemplate } from "../../../components/email-template";
-import { Resend } from "resend";
-import * as React from "react";
+import { EmailTemplate } from "../../../../components/email-template-asesor";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const body = await req.json();
-
-  const { nombre, whatsapp, tipo, ciudad, monto, correo } = body;
-
+  console.log("Send endpoint req.body", body);
+  const { name, whatsapp, email } = body;
+  console.log("nombre", name);
+  console.log("whatsapp", whatsapp);
+  console.log("correo", email);
   try {
     const data = await resend.emails.send({
       from: "WOS <hola@wos.mx>",
       to: ["hola@wos.mx"],
       bcc: ["amadero170@gmail.com"],
-
-      subject: "Nuevo registro",
+      subject: "Hola",
 
       react: EmailTemplate({
-        name: nombre,
+        name,
         whatsapp,
-        tipo,
-        ciudad,
-        correo,
-        monto,
+        correo: email,
       }),
       text: "",
     });
 
     return NextResponse.json(data);
   } catch (error) {
-    console.log("error sending email", error);
     return NextResponse.json({ error });
   }
 }
