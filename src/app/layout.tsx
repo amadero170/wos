@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, Work_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 
 const raleway = Raleway({ subsets: ["latin"] });
+const work_sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "WOS",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>
+      <body className={work_sans.className}>
         <main>{children}</main>
         <Toaster />
       </body>

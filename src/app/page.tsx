@@ -19,7 +19,7 @@ export default function Home() {
           height={61}
         ></Image>
 
-        <div className="text-center text-yellow-300 text-[26px] leading-[54px] font-black">
+        <div className="text-center text-white text-[26px] leading-[54px] font-bold">
           #DigitalEstate
         </div>
 
@@ -35,7 +35,7 @@ export default function Home() {
             height={61}
           ></Image>
         </div>
-        <div className="lg:w-[726px] mb-16 text-center text-white text-[22px] mt-5 font-medium">
+        <div className="lg:w-[726px] mb-16 text-center text-white text-[22px] mt-5">
           Aquí no te queremos vender, existimos para ayudarte a encontrar tu
           propiedad a través de una gran experiencia:
         </div>
@@ -119,10 +119,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#101c3d] py-16 flex flex-col items-center px-4 lg:px-40">
+      <div className="bg-[#0D0D0D] py-16 flex flex-col items-center px-4 lg:px-40">
         <div className="text-center w-9/12 mt-16 mb-10">
-          <span className="text-yellow-300 text-4xl font-black">WOS</span>
-          <span className="text-white text-4xl font-black  ">
+          <span className="text-white text-[40px] font-bold">WOS</span>
+          <span className="text-white text-4xl font-medium  ">
             {" "}
             está listo para iniciar operaciones en Guadalajara, Puerto Vallarta
             y Riviera Nayarit.
